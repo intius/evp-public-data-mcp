@@ -1,0 +1,19 @@
+name: Docker Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build image
+        run: docker build -t evp-public-data-mcp:test .
+
+      - name: Inspect image
+        run: docker image inspect evp-public-data-mcp:test
