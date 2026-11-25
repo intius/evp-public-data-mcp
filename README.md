@@ -53,6 +53,15 @@ npm install
 APIFY_TOKEN=your_token npm start
 ```
 
+### Run with Docker
+
+```bash
+docker build -t evp-public-data-mcp .
+docker run --rm -i -e APIFY_TOKEN=your_token evp-public-data-mcp
+```
+
+The server starts without a token so MCP clients can list tool definitions. The token is required only when a data extraction tool is called.
+
 ## MCP client configuration
 
 ### Claude Desktop or compatible stdio clients
