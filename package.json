@@ -16,5 +16,6 @@
   "license": "MIT",
   "scripts": {
     "start": "node server.js"
-  }
+  },
+  "mcpName": "io.github.intius/evp-public-data-mcp"
 }

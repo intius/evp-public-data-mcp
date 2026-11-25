@@ -1,0 +1,43 @@
+{
+    "$schema":  "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+    "name":  "io.github.intius/evp-public-data-mcp",
+    "title":  "EVP Public Data MCP",
+    "description":  "Public data extraction tools for marketplaces, government datasets, filings, and research.",
+    "version":  "0.1.0",
+    "websiteUrl":  "https://intius.github.io/evp-labs-data-extractors/mcp/",
+    "repository":  {
+                       "url":  "https://github.com/intius/evp-public-data-mcp",
+                       "source":  "github",
+                       "id":  "1472299628"
+                   },
+    "icons":  [
+                  {
+                      "src":  "https://raw.githubusercontent.com/intius/evp-public-data-mcp/main/icon.png",
+                      "mimeType":  "image/png",
+                      "sizes":  [
+                                    "512x512"
+                                ]
+                  }
+              ],
+    "packages":  [
+                     {
+                         "registryType":  "mcpb",
+                         "identifier":  "https://github.com/intius/evp-public-data-mcp/releases/download/v0.1.0/evp-public-data-mcp.mcpb",
+                         "version":  "0.1.0",
+                         "fileSha256":  "0ee6e89d92724de2ef4b605a691d2de723a69bfec940af20d0dbfefc142d63dc",
+                         "transport":  {
+                                           "type":  "stdio"
+                                       },
+                         "environmentVariables":  [
+                                                      {
+                                                          "name":  "APIFY_TOKEN",
+                                                          "description":  "Apify API token used to run the underlying public data extractors",
+                                                          "isRequired":  true,
+                                                          "isSecret":  true,
+                                                          "format":  "string",
+                                                          "placeholder":  "apify_api_..."
+                                                      }
+                                                  ]
+                     }
+                 ]
+}

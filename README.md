@@ -1,5 +1,7 @@
 # EVP Public Data MCP
 
+<!-- mcp-name: io.github.intius/evp-public-data-mcp -->
+
 [![EVP Public Data MCP server](https://glama.ai/mcp/servers/intius/evp-public-data-mcp/badges/score.svg)](https://glama.ai/mcp/servers/intius/evp-public-data-mcp)
 
 A focused Model Context Protocol server that gives AI assistants structured access to curated public data sources: marketplaces, government opportunities, federal spending, clinical trials, SEC filings, podcasts, and games.

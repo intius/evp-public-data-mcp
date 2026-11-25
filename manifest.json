@@ -1,0 +1,111 @@
+{
+  "manifest_version": "0.3",
+  "name": "evp-public-data-mcp",
+  "display_name": "EVP Public Data",
+  "version": "0.1.0",
+  "description": "Curated public data extraction for marketplaces, government data, filings, trials, and research.",
+  "long_description": "EVP Public Data gives AI assistants focused tools for structured public data. Search WordPress plugins, Zapier apps, Atlassian Marketplace apps, VS Code extensions, Apple Podcasts charts, Steam games, Grants.gov opportunities, USAspending awards, ClinicalTrials.gov studies, and SEC EDGAR filings. Every tool returns clean JSON with source links and caps each call at 25 records to control cost.",
+  "author": {
+    "name": "EVP Labs",
+    "url": "https://intius.github.io/evp-labs-data-extractors/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/intius/evp-public-data-mcp.git"
+  },
+  "homepage": "https://intius.github.io/evp-labs-data-extractors/",
+  "documentation": "https://github.com/intius/evp-public-data-mcp#readme",
+  "support": "https://github.com/intius/evp-public-data-mcp/issues",
+  "keywords": [
+    "public data",
+    "government data",
+    "market research",
+    "web scraping",
+    "apify",
+    "lead generation",
+    "ai agents"
+  ],
+  "license": "MIT",
+  "privacy_policies": [
+    "https://docs.apify.com/legal/privacy-policy"
+  ],
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "win32",
+      "linux"
+    ],
+    "runtimes": {
+      "node": ">=18"
+    }
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server/index.js"
+      ],
+      "env": {
+        "APIFY_TOKEN": "${user_config.apify_token}"
+      }
+    }
+  },
+  "user_config": {
+    "apify_token": {
+      "type": "string",
+      "title": "Apify API token",
+      "description": "Token used to run the underlying pay-per-event public data extractors. Stored by the MCP client and never committed to this package.",
+      "sensitive": true,
+      "required": true
+    }
+  },
+  "tools": [
+    {
+      "name": "list_public_data_extractors",
+      "description": "List available public data extractor tools and documentation links."
+    },
+    {
+      "name": "wordpress_plugin_directory",
+      "description": "Search WordPress plugin listings with authors, versions, ratings, and links."
+    },
+    {
+      "name": "zapier_app_directory",
+      "description": "Collect Zapier app directory entries for SaaS integration research."
+    },
+    {
+      "name": "atlassian_marketplace",
+      "description": "Search Atlassian Marketplace apps with vendor, pricing, and rating metadata."
+    },
+    {
+      "name": "vscode_marketplace",
+      "description": "Search VS Code extensions with publisher, install, rating, and version metadata."
+    },
+    {
+      "name": "apple_podcasts_charts",
+      "description": "Read Apple Podcasts chart entries by country and genre."
+    },
+    {
+      "name": "steam_game_intel",
+      "description": "Collect Steam chart and game metadata with review and player enrichment."
+    },
+    {
+      "name": "grants_gov",
+      "description": "Search United States federal grant opportunities with agency, deadline, and award data."
+    },
+    {
+      "name": "usaspending",
+      "description": "Search United States federal awards with recipient, agency, amount, and date fields."
+    },
+    {
+      "name": "clinicaltrials_gov",
+      "description": "Search clinical trial records by condition, status, and country."
+    },
+    {
+      "name": "sec_edgar_filings",
+      "description": "Collect SEC EDGAR company filings by ticker, form type, and start date."
+    }
+  ],
+  "icon": "icon.png"
+}
