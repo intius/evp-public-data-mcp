@@ -1,5 +1,7 @@
 # EVP Public Data MCP
 
+[![EVP Public Data MCP server](https://glama.ai/mcp/servers/intius/evp-public-data-mcp/badges/score.svg)](https://glama.ai/mcp/servers/intius/evp-public-data-mcp)
+
 A focused Model Context Protocol server that gives AI assistants structured access to curated public data sources: marketplaces, government opportunities, federal spending, clinical trials, SEC filings, podcasts, and games.
 
 The server exposes small, task-specific tools instead of one generic scraping endpoint. Every tool calls a public Apify Actor, returns clean JSON, and caps results at 25 records per call to reduce accidental spend.
