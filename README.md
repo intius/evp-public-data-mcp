@@ -31,6 +31,23 @@ The server exposes small, task-specific tools instead of one generic scraping en
 | `sec_edgar_filings` | SEC EDGAR | Retrieve company filings by ticker and form type |
 | `list_public_data_extractors` | Tool catalog | Discover available extractors and documentation |
 
+
+## Hosted streamable HTTP endpoint
+
+The fastest hosted option is the curated Apify MCP endpoint. It exposes the ten published Actor tools plus Apify run and dataset helper tools:
+
+```text
+https://mcp.apify.com/?tools=evpp/wordpress-plugin-directory,evpp/zapier-app-directory,evpp/atlassian-marketplace,evpp/vscode-marketplace,evpp/apple-podcasts-charts,evpp/steam-game-intel,evpp/grants-gov,evpp/usaspending,evpp/clinicaltrials-gov,evpp/sec-edgar-filings
+```
+
+Use Apify OAuth when the client supports it, or send this authorization header:
+
+```text
+Authorization: Bearer YOUR_APIFY_TOKEN
+```
+
+The hosted endpoint is useful when you want the Actors without running a local server. Use the local MCPB or stdio server below when you want the fixed 25-record response cap and the focused catalog tool.
+
 ## Requirements
 
 - Node.js 18 or newer
@@ -53,14 +70,14 @@ Before installing, you can verify the file hash:
 ### Run directly from GitHub
 
 ```bash
-APIFY_TOKEN=your_token npx -y github:intius/evp-public-data-mcp
+APIFY_TOKEN=your_token npx -y github:intius/evp-public-data-mcp#v0.1.0
 ```
 
 On Windows PowerShell, set the token first:
 
 ```powershell
 $env:APIFY_TOKEN="your_token"
-npx -y github:intius/evp-public-data-mcp
+npx -y github:intius/evp-public-data-mcp#v0.1.0
 ```
 
 ### Install from source
@@ -90,7 +107,7 @@ The server starts without a token so MCP clients can list tool definitions. The 
   "mcpServers": {
     "evp-public-data": {
       "command": "npx",
-      "args": ["-y", "github:intius/evp-public-data-mcp"],
+      "args": ["-y", "github:intius/evp-public-data-mcp#v0.1.0"],
       "env": {
         "APIFY_TOKEN": "your_token"
       }
@@ -124,3 +141,4 @@ https://intius.github.io/evp-labs-data-extractors/
 ## License
 
 MIT
+
