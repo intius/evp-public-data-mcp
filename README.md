@@ -4,7 +4,9 @@
 
 [![EVP Public Data MCP server](https://glama.ai/mcp/servers/intius/evp-public-data-mcp/badges/score.svg)](https://glama.ai/mcp/servers/intius/evp-public-data-mcp)
 
-A focused Model Context Protocol server that gives AI assistants structured access to curated public data sources: marketplaces, government opportunities, federal spending, clinical trials, SEC filings, podcasts, and games.
+Eleven focused MCP tools connect AI assistants to ten live public-data extractors plus a discovery catalog. They cover marketplace intelligence, federal grants, public spending, clinical trials, SEC filings, podcast charts, and game metadata.
+
+Every extraction tool returns structured JSON through a pay-per-result Apify Actor. New Apify accounts include $5 of free monthly usage credit, so small evaluation calls can cost nothing. This server adds an extra safety layer: every call defaults to 10 records and is capped at 25 records.
 
 ## Verified distribution
 
@@ -12,6 +14,7 @@ A focused Model Context Protocol server that gives AI assistants structured acce
 - Registry verification: https://registry.modelcontextprotocol.io/v0/servers?search=evp-public-data-mcp
 - One-click MCPB desktop extension release: https://github.com/intius/evp-public-data-mcp/releases/tag/v0.1.1
 - MCPB SHA-256: `71f918a26a18c9c4bcfead69a2db7ace20bfcba443e19692c808bbdfe89a0dde`
+- MCPLayer listing: https://mcplayer.ai/servers/io-github-intius-evp-public-data-mcp
 
 The server exposes small, task-specific tools instead of one generic scraping endpoint. Every tool calls a public Apify Actor, returns clean JSON, and caps results at 25 records per call to reduce accidental spend.
 
