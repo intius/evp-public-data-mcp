@@ -6,6 +6,13 @@
 
 A focused Model Context Protocol server that gives AI assistants structured access to curated public data sources: marketplaces, government opportunities, federal spending, clinical trials, SEC filings, podcasts, and games.
 
+## Verified distribution
+
+- Official MCP Registry name: `io.github.intius/evp-public-data-mcp`
+- Registry verification: https://registry.modelcontextprotocol.io/v0/servers?search=evp-public-data-mcp
+- One-click MCPB desktop extension release: https://github.com/intius/evp-public-data-mcp/releases/tag/v0.1.0
+- MCPB SHA-256: `0ee6e89d92724de2ef4b605a691d2de723a69bfec940af20d0dbfefc142d63dc`
+
 The server exposes small, task-specific tools instead of one generic scraping endpoint. Every tool calls a public Apify Actor, returns clean JSON, and caps results at 25 records per call to reduce accidental spend.
 
 ## Available tools
@@ -32,6 +39,16 @@ The server exposes small, task-specific tools instead of one generic scraping en
 The underlying Actors are pay-per-event. Start with small `maxItems` values. This server caps every call at 25 items.
 
 ## Install and run
+
+### Install the Claude Desktop extension
+
+Download `evp-public-data-mcp.mcpb` from the [0.1.0 release](https://github.com/intius/evp-public-data-mcp/releases/tag/v0.1.0), open it with Claude Desktop, click Install, and enter your Apify API token when prompted. Claude Desktop includes the Node.js runtime needed by the extension.
+
+Before installing, you can verify the file hash:
+
+```text
+0ee6e89d92724de2ef4b605a691d2de723a69bfec940af20d0dbfefc142d63dc
+```
 
 ### Run directly from GitHub
 
