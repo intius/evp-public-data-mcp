@@ -1,0 +1,20 @@
+{
+  "name": "evp-public-data-mcp",
+  "version": "0.1.0",
+  "description": "MCP server exposing curated public data extractors for marketplaces, government data, grants, trials, filings, jobs, and leads",
+  "type": "module",
+  "bin": {
+    "evp-public-data-mcp": "./server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "zod": "4.6.7"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
