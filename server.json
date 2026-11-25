@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.intius/evp-public-data-mcp",
   "title": "EVP Public Data MCP",
-  "description": "Public data extraction tools for marketplaces, government datasets, filings, and research.",
-  "version": "0.1.0",
+  "description": "Public data tools for marketplaces, government data, filings, trials, podcasts, and games.",
+  "version": "0.1.1",
   "websiteUrl": "https://intius.github.io/evp-labs-data-extractors/mcp/",
   "repository": {
     "url": "https://github.com/intius/evp-public-data-mcp",
@@ -22,9 +22,9 @@
   "packages": [
     {
       "registryType": "mcpb",
-      "identifier": "https://github.com/intius/evp-public-data-mcp/releases/download/v0.1.0/evp-public-data-mcp.mcpb",
-      "version": "0.1.0",
-      "fileSha256": "0ee6e89d92724de2ef4b605a691d2de723a69bfec940af20d0dbfefc142d63dc",
+      "identifier": "https://github.com/intius/evp-public-data-mcp/releases/download/v0.1.1/evp-public-data-mcp.mcpb",
+      "version": "0.1.1",
+      "fileSha256": "71f918a26a18c9c4bcfead69a2db7ace20bfcba443e19692c808bbdfe89a0dde",
       "transport": {
         "type": "stdio"
       },
@@ -36,6 +36,20 @@
           "isSecret": true,
           "format": "string",
           "placeholder": "apify_api_..."
+        }
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com/?tools=evpp/wordpress-plugin-directory,evpp/zapier-app-directory,evpp/atlassian-marketplace,evpp/vscode-marketplace,evpp/apple-podcasts-charts,evpp/steam-game-intel,evpp/grants-gov,evpp/usaspending,evpp/clinicaltrials-gov,evpp/sec-edgar-filings",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer Apify API token used to run the underlying public data extraction Actors",
+          "isRequired": true,
+          "isSecret": true
         }
       ]
     }

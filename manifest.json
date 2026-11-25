@@ -2,7 +2,7 @@
   "manifest_version": "0.3",
   "name": "evp-public-data-mcp",
   "display_name": "EVP Public Data",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Curated public data extraction for marketplaces, government data, filings, trials, and research.",
   "long_description": "EVP Public Data gives AI assistants focused tools for structured public data. Search WordPress plugins, Zapier apps, Atlassian Marketplace apps, VS Code extensions, Apple Podcasts charts, Steam games, Grants.gov opportunities, USAspending awards, ClinicalTrials.gov studies, and SEC EDGAR filings. Every tool returns clean JSON with source links and caps each call at 25 records to control cost.",
   "author": {

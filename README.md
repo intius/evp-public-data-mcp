@@ -10,8 +10,8 @@ A focused Model Context Protocol server that gives AI assistants structured acce
 
 - Official MCP Registry name: `io.github.intius/evp-public-data-mcp`
 - Registry verification: https://registry.modelcontextprotocol.io/v0/servers?search=evp-public-data-mcp
-- One-click MCPB desktop extension release: https://github.com/intius/evp-public-data-mcp/releases/tag/v0.1.0
-- MCPB SHA-256: `0ee6e89d92724de2ef4b605a691d2de723a69bfec940af20d0dbfefc142d63dc`
+- One-click MCPB desktop extension release: https://github.com/intius/evp-public-data-mcp/releases/tag/v0.1.1
+- MCPB SHA-256: `71f918a26a18c9c4bcfead69a2db7ace20bfcba443e19692c808bbdfe89a0dde`
 
 The server exposes small, task-specific tools instead of one generic scraping endpoint. Every tool calls a public Apify Actor, returns clean JSON, and caps results at 25 records per call to reduce accidental spend.
 
@@ -59,25 +59,25 @@ The underlying Actors are pay-per-event. Start with small `maxItems` values. Thi
 
 ### Install the Claude Desktop extension
 
-Download `evp-public-data-mcp.mcpb` from the [0.1.0 release](https://github.com/intius/evp-public-data-mcp/releases/tag/v0.1.0), open it with Claude Desktop, click Install, and enter your Apify API token when prompted. Claude Desktop includes the Node.js runtime needed by the extension.
+Download `evp-public-data-mcp.mcpb` from the [0.1.1 release](https://github.com/intius/evp-public-data-mcp/releases/tag/v0.1.1), open it with Claude Desktop, click Install, and enter your Apify API token when prompted. Claude Desktop includes the Node.js runtime needed by the extension.
 
 Before installing, you can verify the file hash:
 
 ```text
-0ee6e89d92724de2ef4b605a691d2de723a69bfec940af20d0dbfefc142d63dc
+71f918a26a18c9c4bcfead69a2db7ace20bfcba443e19692c808bbdfe89a0dde
 ```
 
 ### Run directly from GitHub
 
 ```bash
-APIFY_TOKEN=your_token npx -y github:intius/evp-public-data-mcp#v0.1.0
+APIFY_TOKEN=your_token npx -y github:intius/evp-public-data-mcp#v0.1.1
 ```
 
 On Windows PowerShell, set the token first:
 
 ```powershell
 $env:APIFY_TOKEN="your_token"
-npx -y github:intius/evp-public-data-mcp#v0.1.0
+npx -y github:intius/evp-public-data-mcp#v0.1.1
 ```
 
 ### Install from source
@@ -107,7 +107,7 @@ The server starts without a token so MCP clients can list tool definitions. The 
   "mcpServers": {
     "evp-public-data": {
       "command": "npx",
-      "args": ["-y", "github:intius/evp-public-data-mcp#v0.1.0"],
+      "args": ["-y", "github:intius/evp-public-data-mcp#v0.1.1"],
       "env": {
         "APIFY_TOKEN": "your_token"
       }

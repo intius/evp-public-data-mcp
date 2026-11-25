@@ -1,6 +1,6 @@
 {
   "name": "evp-public-data-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MCP server exposing curated public data extractors for marketplaces, government data, grants, trials, filings, jobs, and leads",
   "type": "module",
   "bin": {
@@ -15,7 +15,11 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build:mcpb": "node build-mcpb.mjs"
   },
-  "mcpName": "io.github.intius/evp-public-data-mcp"
+  "mcpName": "io.github.intius/evp-public-data-mcp",
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
 }
