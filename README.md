@@ -138,6 +138,12 @@ Human-readable documentation, sample rows, input references, Python examples, Ja
 
 https://intius.github.io/evp-labs-data-extractors/
 
+## Privacy and security
+
+- Privacy policy: [PRIVACY.md](PRIVACY.md) and https://intius.github.io/evp-labs-data-extractors/privacy/
+- Security policy: [SECURITY.md](SECURITY.md)
+- Support: https://github.com/intius/evp-public-data-mcp/issues
+
 ## License
 
 MIT

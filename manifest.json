@@ -27,6 +27,7 @@
   ],
   "license": "MIT",
   "privacy_policies": [
+    "https://intius.github.io/evp-labs-data-extractors/privacy/",
     "https://docs.apify.com/legal/privacy-policy"
   ],
   "compatibility": {
